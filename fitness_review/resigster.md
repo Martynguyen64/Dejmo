@@ -1,99 +1,82 @@
-<html lang="{{ site.lang | default: "en-US" }}">
+<!DOCTYPE html>
+<html>
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Sign Up For Your Account</title>
+    <title>Registration Form</title>
     <style>
-        h1 {
-          text-align: center;
-          font-size: 40px;
-          font-weight: 700;
-          color: #0AAAF5;
-          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        }
-        input.login {
-          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-          margin-top: 5%;
-          position: inline;
-          width: 50%;
-          margin-left: 25%;
-          margin-right: 30%;
-          padding: 2%;
-          font-size: 25px;
-          background-color: #0AAAF5;
-          color: #0AAAF5;
-          border: none;
-          border-radius: 5px;
-          border-bottom: 4px solid #0AAAF5;
-          transition-duration: 0.3s;
-        }
-        input.login:focus {
-          background-color: #4d4c4b;
-          outline: none;
-        }
-        button {
-          outline: none;
-          -webkit-tap-highlight-color: transparent;
-          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-          font-size: 20px;
-          margin-top: 4%; 
-          margin-bottom: 4%;
-          position: inline;
-          width: 40%;
-          margin-left: 30%;
-          margin-right: 30%;
-          padding: 2%;
-          border-radius: 8px;
-          background-color: #302f2f;
-          color: #0AAAF5;
-          border: none;
-          transition-duration: 0.3s;
-        }
-        
-        div.noacc {
-          margin-top: 4%;
-          margin-left: 25%;
-          margin-right: 25%;
-          position: inline;
-          width: 50%;
-        }
-        #alracc {
-          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-          color: #0AAAF5;
-          font-size: 25px;
-          text-align: center;
-          margin-bottom: 0%;          
-        }
+      /* Center the title */
+      h1 {
+        text-align: center;
+        color: #00BFFF; /* blue color */
+      }
+      /* Center the submit button */
+      input[type="submit"] {
+        margin: 0 auto;
+        width: 150px;
+        height: 50px;
+        font-size: 20px;
+        display: block;
+        margin: 30px auto;
+        background-color:#00bfff;
+        color:white;
+      }
+      /* Use Grid layout to separate title and rest of the form */
+      body {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+        height: 100vh;
+        margin: 0;
+      }
+      /* Add background color for title */
+      .title {
+        background-color: #F2F2F2; /* light gray color */
+        padding: 20px;
+      }
+      /* Add space and background color between fields */
+      .field {
+        margin: 60px 0;
+        padding: 10px;
+        background-color: transparent; /* light gray color */
+      }
+      form {
+        text-align:center;
+      }
     </style>
-
   </head>
   <body>
-    <h1 class="header">
-      Sign Up For Your Account!
-    </h1>
-    <input type="username" class="login" id="user" placeholder="Username">
-    <input type="name" class="login" id="name" placeholder="Full Name">
-    <input type="password" class="login" id="pswd" placeholder="Password">
+    <div class="title">
+      <h1>DEJMO FITNESS</h1>
+    </div>
     <div>
-    <br>
-      <button id="enter" type="button" onclick="window.location.href='{{ site.baseurl }}/movie_review/search';">Create Account</button>
-      <div class="noacc">
-       <p id="alracc">Back to Login Page</p>
-      </div>
-      <button id="login" type="button" onclick="window.location.href='{{ site.baseurl }}/movie_review/login/login';">Log In</button>
+      <form action="/register" method="POST">
+        <div class="field">
+          <label for="firstname">First Name:</label>
+          <input type="text" id="firstname" name="firstname" required>
+        </div>
+        <div class="field">
+          <label for="lastname">Last Name:</label>
+          <input type="text" id="lastname" name="lastname" required>
+        </div>
+        <div class="field">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="field">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+        <div class="field">
+          <label for="dob">DOB:</label>
+          <input type="date" id="dob" name="dob" required>
+        </div>
+        <div class="field">
+          <label for="phone">Phone:</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div class="field">
+          <input type="submit" value="Submit">
+        </div>
+      </form>
     </div>
   </body>
-  <script>
-      // Get the input field
-      var input = document.getElementById("pswd");
-      // Execute a function when the user presses a key on the keyboard
-      input.addEventListener("keypress", function(event) {
-        // If the user presses the "Enter" key on the keyboard
-        if (event.key === "Enter") {
-          event.preventDefault();
-          // Trigger the button element with a click
-          document.getElementById("enter").click();
-        }
-      });
-    </script>
 </html>
