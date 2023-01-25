@@ -1,4 +1,4 @@
-# Group Work Ideas
+brew outdated# Group Work Ideas
 
 You can find our open issues right [here](https://github.com/Martynguyen64/Dejmo/issues).
 
