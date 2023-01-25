@@ -2,11 +2,14 @@
 <html>
   <head>
     <title>Registration Form</title>
+
     <style>
       /* Center the title */
       h1 {
         text-align: center;
         color: #00bfff; /* blue color */
+       
+       
       }
       
       /* Center the submit button */
@@ -17,8 +20,8 @@
         font-size: 20px;
         display: block;
         margin: 30px auto;
-        background-color:#00bfff;
-        color:white;
+      
+        color:black;
       }
       
       /* Use Grid layout to separate title and rest of the form */
@@ -32,7 +35,7 @@
       
       /* Add background color for title */
       .title {
-        background-color: #f2f2f2; /* light gray color */
+  
         padding: 20px;
       }
       
@@ -40,7 +43,7 @@
       .field {
         margin: 60px 0;
         padding: 10px;
-        background-color: #f9f9f9; /* light gray color */
+     
       }
       form {
         text-align:center;
@@ -84,3 +87,4 @@
     </div>
   </body>
 </html>
+
