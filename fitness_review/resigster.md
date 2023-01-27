@@ -19,8 +19,8 @@
         font-size: 20px;
         display: block;
         margin: 30px auto;
-      
-        color:black;
+      background-color: #00008B;
+        color:white;
       }
       
       /* Use Grid layout to separate title and rest of the form */
