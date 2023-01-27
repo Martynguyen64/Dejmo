@@ -1,97 +1,45 @@
-<html>
-  <head>
-    <title>Registration Form</title>
-
+<head>
     <style>
-      /* Center the title */
       h1 {
-        text-align: center;
-        color: #00bfff; /* blue color */
-       
-       
-      }
-      
-      /* Center the submit button */
-      input[type="submit"] {
-        margin: 0 auto;
-        width: 150px;
-        height: 50px;
-        font-size: 20px;
-        display: block;
-        margin: 30px auto;
-      
-        color:black;
-      }
-      
-      /* Use Grid layout to separate title and rest of the form */
-      body {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto 1fr;
-        height: 100vh;
-        margin: 0;
-      }
-      
-      /* Add background color for title */
-      .title {
-  
-        padding: 20px;
-      }
-      
-      /* Add space and background color between fields */
-      .field {
-        margin: 60px 0;
-        padding: 10px;
-     
-      }
-      form {
-        text-align:center;
-      }
-      
-      /* Add dark blue color to text input boxes */
-      input[type="text"], input[type="email"], input[type="password"], input[type="date"], input[type="tel"] {
-        background-color: #00008B;
-        color: white;
+        color: darkblue;
       }
     </style>
-  </head>
-  <body>
-    <div class="title">
-      <h1>DEJMO FITNESS</h1>
+
+
+<div id="login-form" style="text-align: center;">
+  <h1>Welcome to DEJMO Fitness</h1>
+  <div style="display: flex; justify-content: center;">
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" style="width: 200px; height: 30px; padding:5px; margin:5px;" required>
     </div>
-    <div>
-      <form action="/register" method="POST">
-        <div class="field">
-          <label for="firstname">First Name:</label>
-          <input type="text" id="firstname" name="firstname" required>
-        </div>
-        <div class="field">
-          <label for="lastname">Last Name:</label>
-          <input type="text" id="lastname" name="lastname" required>
-        </div>
-        <div class="field">
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-        <div class="field">
-          <label for="password">Password:</label>
-          <input type="password" id="password" name="password" required>
-        </div>
-        <div class="field">
-          <label for="dob">DOB:</label>
-          <input type="date" id="dob" name="dob" required>
-        </div>
-        <div class="field">
-          <label for="phone">Phone:</label>
-          <input type="tel" id="phone" name="phone" required>
-        </div>
-        <div class="field">
-          <input type="submit" value="Submit">
-        </div>
-      </form>
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" style="width: 200px; height: 30px; padding:5px; margin:5px;" required>
     </div>
-  </body>
-</html>
+  </div>
+  <div style="display: flex; justify-content: center; margin-top:10px;">
+    <button type="submit" style="width: 80px; height: 30px; padding:5px; margin:5px;">Login</button>
+  </div>
+  <p>Don't have an account? <a href="#" id="toggle-register">Register here</a></p>
+</div>
 
-
-
+<div id="register-form" style="display: none;">
+  <h1>Register</h1>
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" style="width: 200px; height: 30px; padding:5px; margin:5px;" required>
+  </div>
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" style="width: 200px; height: 30px; padding:5px; margin:5px;" required>
+  </div>
+  <div class="form-group">
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" style="width: 200px; height: 30px; padding:5px; margin:5px;" required>
+  </div>
+  <div style="display: flex; justify-content: center; margin-top:10px;">
+    <button type="submit" style="width: 80px; height: 30px; padding:5px; margin:5px;">Register</button>
+  </div>
+  <p>Already have an account? <a href="#" id="toggle-login">Login here</a></p>
+</div>
