@@ -1,4 +1,3 @@
-
 <html>
   <head>
     <title>Registration Form</title>
@@ -48,6 +47,12 @@
       form {
         text-align:center;
       }
+      
+      /* Add dark blue color to text input boxes */
+      input[type="text"], input[type="email"], input[type="password"], input[type="date"], input[type="tel"] {
+        background-color: #00008B;
+        color: white;
+      }
     </style>
   </head>
   <body>
@@ -87,4 +92,6 @@
     </div>
   </body>
 </html>
+
+
 
