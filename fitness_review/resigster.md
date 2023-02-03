@@ -19,7 +19,7 @@
         font-size: 20px;
         display: block;
         margin: 30px auto;
-      background-color: #00008B;
+      background-color: #000000;
         color:white;
       }
       
@@ -50,7 +50,7 @@
       
       /* Add dark blue color to text input boxes */
       input[type="text"], input[type="email"], input[type="password"], input[type="date"], input[type="tel"] {
-        background-color: #00008B;
+        background-color: #FFFFF;
         color: white;
       }
     </style>
@@ -76,10 +76,6 @@
         <div class="field">
           <label for="password">Password:</label>
           <input type="password" id="password" name="password" required>
-        </div>
-        <div class="field">
-          <label for="dob">DOB:</label>
-          <input type="date" id="dob" name="dob" required>
         </div>
         <div class="field">
           <label for="phone">Phone:</label>
