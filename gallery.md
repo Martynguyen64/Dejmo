@@ -57,12 +57,20 @@
             <p>
                 <label>Activity Level:</label>
                 <select name="activity_level">
+                    <option value="not active">Not Active</option>
                     <option value="sedentary">Sedentary</option>
                     <option value="lightly active">Lightly Active</option>
                     <option value="moderately active">Moderately Active</option>
                     <option value="very active">Very Active</option>
                     <option value="extra active">Extra Active</option>
                 </select>
+            </p>
+            <p>
+                <label>Workout Preference:</label>
+                <select name="workout_preference">
+                    <option value="Cardio"></option>
+                    <option value="Lifting"></option>
+                    <option value="Calisthenics"></option>
             </p>
             <p>
                 <label>Goal Weight (LBS):</label>
